@@ -30,8 +30,8 @@ services:
     ports:
       - "5432:5432"
     environment:
-      - POSTGRES_USER=${DB_USER}
-      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_USER=pretix
+      - POSTGRES_PASSWORD=pretix
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:
