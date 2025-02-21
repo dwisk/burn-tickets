@@ -10,8 +10,8 @@ services:
       - database
       - cache
     environment:
-      - VIRTUAL_HOST=tickets.burn.directory
-      - LETSENCRYPT_HOST=tickets.burn.directory
+      - VIRTUAL_HOST=tickets.germanburners.de
+      - LETSENCRYPT_HOST=tickets.germanburners.de
 
     volumes:
       - pretix_data:/data
