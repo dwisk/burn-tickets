@@ -10,8 +10,8 @@ services:
       - database
       - cache
     environment:
-      - VIRTUAL_HOST=tickets.germanburners.de
-      - LETSENCRYPT_HOST=tickets.germanburners.de
+      - VIRTUAL_HOST=tickets.germanburners.de,tickets.munichburners.de
+      - LETSENCRYPT_HOST=tickets.germanburners.de,tickets.munichburners.de
 
     volumes:
       - pretix_data:/data
@@ -28,8 +28,8 @@ services:
   database:
     image: postgres:16-alpine3.20
     container_name: database
-    ports:
-      - "5432:5432"
+      #ports:
+      #  - "5432:5432"
     environment:
       - POSTGRES_USER=pretix
       - POSTGRES_PASSWORD=pretix
@@ -41,8 +41,8 @@ services:
   cache:
     image: redis:alpine3.20
     container_name: pretix_redis
-    ports:
-      - "6379:6379"
+      #ports:
+      #- "6379:6379"
     restart: always
     networks:
       - burnertickets
