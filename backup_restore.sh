@@ -23,7 +23,7 @@ fi
 echo "Stopping pretix"
 
 
-docker compose stop pretix_app
+docker compose stop app
 
 echo "Resetting the 'pretix' database..."
 
@@ -52,7 +52,7 @@ fi
 echo "Database restored successfully from '$DUMP_FILE'."
 
 echo "start pretix"
-docker compose stop pretix_app
+docker compose start app
 
 exit 0
 
