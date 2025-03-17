@@ -23,3 +23,6 @@ docker run --rm \
 
 ./backup_create.sh to create local sql dump in ./backups
 ./backup_restore.sh ./backups/xyz.sql to replace db 
+
+**Crontab**
+0 2 * * * /home/docker/burn-tickets/backup_create.sh >> /home/docker/burn-tickets/backups/backup.log 2>&1
