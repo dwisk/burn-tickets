@@ -18,6 +18,22 @@ docker run --rm \
   sh -c "cd /from && tar cf - . | tar xf - -C /to"
 ```
 
+## Update
+
+- Check backups!
+- Pull new images
+- Build pretix
+- Restart and watch updates in docker compose output
+- Stop and restart detached
+
+```
+docker compose pull
+docker pull pretix/standalone:stable
+docker compose build
+docker compose down && docker compose up
+docker compose up -d
+```
+
 
 ## Backups
 
