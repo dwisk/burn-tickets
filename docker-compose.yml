@@ -10,8 +10,8 @@ services:
       - database
       - cache
     environment:
-      - VIRTUAL_HOST=tickets.germanburners.de,tickets.munichburners.de,membership.mauersegler.art
-      - LETSENCRYPT_HOST=tickets.germanburners.de,tickets.munichburners.de,membership.mauersegler.art
+      - VIRTUAL_HOST=tickets.germanburners.de,tickets.munichburners.de,membership.mauersegler.art,tickets.burnontherocks.com
+      - LETSENCRYPT_HOST=tickets.germanburners.de,tickets.munichburners.de,membership.mauersegler.art,tickets.burnontherocks.com
 
     volumes:
       - pretix_data:/data
